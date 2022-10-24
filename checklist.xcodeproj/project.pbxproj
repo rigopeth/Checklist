@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E06E30C29038F5E00FDC77F /* AddItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E06E30B29038F5E00FDC77F /* AddItemTableViewController.swift */; };
 		7E4AA38F29021E44001300EA /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4AA38E29021E44001300EA /* ChecklistItem.swift */; };
 		7E557D6228FF633900BAB88D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E557D6128FF633900BAB88D /* AppDelegate.swift */; };
 		7E557D6428FF633900BAB88D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E557D6328FF633900BAB88D /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E06E30B29038F5E00FDC77F /* AddItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemTableViewController.swift; sourceTree = "<group>"; };
 		7E4AA38E29021E44001300EA /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 		7E557D5E28FF633900BAB88D /* checklist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = checklist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E557D6128FF633900BAB88D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				7E557D6C28FF634000BAB88D /* LaunchScreen.storyboard */,
 				7E557D6F28FF634000BAB88D /* Info.plist */,
 				7E4AA38E29021E44001300EA /* ChecklistItem.swift */,
+				7E06E30B29038F5E00FDC77F /* AddItemTableViewController.swift */,
 			);
 			path = checklist;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E557D6628FF633900BAB88D /* ChecklistViewController.swift in Sources */,
+				7E06E30C29038F5E00FDC77F /* AddItemTableViewController.swift in Sources */,
 				7E557D6228FF633900BAB88D /* AppDelegate.swift in Sources */,
 				7E557D6428FF633900BAB88D /* SceneDelegate.swift in Sources */,
 				7E4AA38F29021E44001300EA /* ChecklistItem.swift in Sources */,
