@@ -7,7 +7,38 @@
 
 import UIKit
 
-class ChecklistViewController: UITableViewController {
+class ChecklistViewController: UITableViewController, AddItemViewControllerDelegate {
+    
+    func itemDetailViewControllerdidCancel(_ controller: ItemDetailViewController) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func itemDetailViewController(
+        _ controller: ItemDetailViewController,
+        didFinishAdding item: ChecklistItem) {
+        let newRowIndex = items.count
+        items.append(item)
+        
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRows(at: indexPaths, with: .automatic)
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func itemDetailViewController(
+      _ controller: ItemDetailViewController,
+      didFinishEditing item: ChecklistItem
+    ) {
+      if let index = items.firstIndex(of: item) {
+        let indexPath = IndexPath(row: index, section: 0)
+        if let cell = tableView.cellForRow(at: indexPath) {
+          configureText(for: cell, with: item)
+        }
+      }
+      navigationController?.popViewController(animated: true)
+    }
+
+    
     
     var items = [ChecklistItem]()  // Those square brackets indicate that the variable is going to be an array containing ChecklistItem objects. And the brackets at the end () simply indicate that you are creating an instance of this array
     
@@ -144,11 +175,13 @@ class ChecklistViewController: UITableViewController {
     func configureCheckmark(
         for cell: UITableViewCell,
         with item: ChecklistItem){
-            if item.checked {
-                cell.accessoryType = .checkmark
-              } else {
-                cell.accessoryType = .none
-              }
+            let label = cell.viewWithTag(1001) as! UILabel
+            
+            if(item.checked){
+                label.text = "√"
+            } else {
+                label.text = ""
+            }
         }
     
     func configureText(
@@ -159,19 +192,27 @@ class ChecklistViewController: UITableViewController {
         label.text = item.text
     }
     
-    // MARK: Actions
     
-    @IBAction func additem (){
-        let newRowIndex = items.count
+    // MARK: Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // 1
         
-        let item = ChecklistItem()
-        item.text = "I am a new row"
-        item.checked = true
-        items.append(item)
-        
-        let indexPath = IndexPath(row: newRowIndex, section: 0)
-        let indexPaths = [indexPath]
-        tableView.insertRows(at: indexPaths, with: .automatic)
+        if segue.identifier == "AddItem"{
+            //2
+            let controler = segue.destination as! ItemDetailViewController
+            //3
+            controler.delegate = self
+        } else if segue.identifier == "EditItem" {
+            let controller = segue.destination as! ItemDetailViewController
+            controller.delegate = self
+
+            if let indexPath = tableView.indexPath(
+              for: sender as! UITableViewCell) {
+              controller.itemToEdit = items[indexPath.row]
+            }
+          }
     }
+    
 }
 
