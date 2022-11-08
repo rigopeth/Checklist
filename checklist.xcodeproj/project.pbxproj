@@ -15,10 +15,10 @@
 		7E557D6628FF633900BAB88D /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E557D6528FF633900BAB88D /* ChecklistViewController.swift */; };
 		7E557D6928FF633900BAB88D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E557D6728FF633900BAB88D /* Main.storyboard */; };
 		7E557D6B28FF634000BAB88D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E557D6A28FF634000BAB88D /* Assets.xcassets */; };
-		7E557D6E28FF634000BAB88D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E557D6C28FF634000BAB88D /* LaunchScreen.storyboard */; };
 		7E8CF7672914B74C00F8EF18 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8CF7662914B73B00F8EF18 /* DataModel.swift */; };
 		7EB750BF2911A20D0060F23A /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB750BE2911A20C0060F23A /* Checklist.swift */; };
 		7EB750C12911E85F0060F23A /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB750C02911E85F0060F23A /* ListDetailViewController.swift */; };
+		7EF768C22919EA9A0070B59B /* IconPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF768C12919EA9A0070B59B /* IconPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,11 +31,11 @@
 		7E557D6528FF633900BAB88D /* ChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
 		7E557D6828FF633900BAB88D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E557D6A28FF634000BAB88D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7E557D6D28FF634000BAB88D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E557D6F28FF634000BAB88D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E8CF7662914B73B00F8EF18 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		7EB750BE2911A20C0060F23A /* Checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
 		7EB750C02911E85F0060F23A /* ListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
+		7EF768C12919EA9A0070B59B /* IconPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +95,7 @@
 				7E557D6528FF633900BAB88D /* ChecklistViewController.swift */,
 				7E06E30B29038F5E00FDC77F /* ItemDetailViewController.swift */,
 				7EB750C02911E85F0060F23A /* ListDetailViewController.swift */,
+				7EF768C12919EA9A0070B59B /* IconPickerViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -103,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				7E557D6A28FF634000BAB88D /* Assets.xcassets */,
-				7E557D6C28FF634000BAB88D /* LaunchScreen.storyboard */,
 				7E557D6728FF633900BAB88D /* Main.storyboard */,
 			);
 			path = Resources;
@@ -167,7 +167,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E557D6E28FF634000BAB88D /* LaunchScreen.storyboard in Resources */,
 				7E557D6B28FF634000BAB88D /* Assets.xcassets in Resources */,
 				7E557D6928FF633900BAB88D /* Main.storyboard in Resources */,
 			);
@@ -183,6 +182,7 @@
 				7E557D6628FF633900BAB88D /* ChecklistViewController.swift in Sources */,
 				7E06E30C29038F5E00FDC77F /* ItemDetailViewController.swift in Sources */,
 				7E29CF62291046B300A02604 /* AllListsViewController.swift in Sources */,
+				7EF768C22919EA9A0070B59B /* IconPickerViewController.swift in Sources */,
 				7E557D6228FF633900BAB88D /* AppDelegate.swift in Sources */,
 				7E557D6428FF633900BAB88D /* SceneDelegate.swift in Sources */,
 				7E4AA38F29021E44001300EA /* ChecklistItem.swift in Sources */,
@@ -201,14 +201,6 @@
 				7E557D6828FF633900BAB88D /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		7E557D6C28FF634000BAB88D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7E557D6D28FF634000BAB88D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -340,7 +332,7 @@
 				INFOPLIST_FILE = checklist/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Checklist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -370,7 +362,7 @@
 				INFOPLIST_FILE = checklist/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Checklist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
